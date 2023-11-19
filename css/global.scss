@@ -1,27 +1,16 @@
-@import"~bootstrap/dist/css/bootstrap.css";
-@import"~bootstrap-icons/font/bootstrap-icons.css";
-
 @import "../node_modules/bootstrap/scss/bootstrap";
-/* Option 2: Import via CSS */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-@import 'aos/dist/aos.css';
-.bg-primary {
-    background: var(--Prime600, #72CEF5) !important;
+@import '../node_modules/aos/dist/aos.css';
+
+.bg-first {
+    background: var(--Prime600, #72CEF5);
 }
+
 .bg-second {
-    width: 100%;    
+    width: 100%;
     background: var(--Prime600, #CCC) !important;
 }
 
-body {
-    top: 0px;
-    width: 100%;
-    transition: all 3s;
-    &.scrolled {
-       background-color: gold;
-       }
-    }
- 
 .navbar {
     color: var(--Gray300, #383735);
 
@@ -38,9 +27,18 @@ body {
 
 }
 
+body {
+    transition: all 3s;
+
+    &.scrolled {
+        background: var(--Gray100-BK, #E2E2E2);
+    }
+}
+
 .navbar-brand {
     margin-right: 87px;
 }
+
 
 .me-12 {
     margin-right: 12px;
@@ -74,7 +72,8 @@ body {
     text-transform: uppercase;
     width: 200px;
     // height: 48px;
-    vertical-align: middle;line-height: 35px;
+    vertical-align: middle;
+    line-height: 35px;
     border-radius: 50px;
     padding: 20px 8px;
 }
@@ -87,3 +86,20 @@ body {
 .news-cat {
     width: 257px;
 }
+
+.news-cat:before{
+    z-index:2;
+    top:60px;
+    height:50px;
+    background:#c00;
+    border-radius:2px;
+    transform: rotate(45deg);
+    animation:box .8s infinite ; 
+  }
+
+  .news-cat:after{
+    z-index:1;
+    top:128px;
+    height:3px;
+    animation:shadow .8s infinite ; 
+  }
