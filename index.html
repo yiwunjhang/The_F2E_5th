@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="dist/aos.css" />
-    <script src="dist/aos.js"> </script>
     <title>The F2E 5th</title>
 </head>
+<script>
+    const elem = document.querySelector('body');
+    const scrolled = () => {
+        const threshold = document.documentElement.scrollTop > 50;
+        elem.classList.toggle('scrolled', threshold);
+    };
+    window.addEventListener('scroll', scrolled);
+
+</script>
 
 <body class="bg-primary">
     <div class="container-lg mt-5">
@@ -20,39 +27,51 @@
                 <div class="d-flex justify-content-end">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-auto">
                         <li class="nav-item me-4">
-                            <img src="./images/pawBtn.png" alt="#" class="me-12">
-                            <a class="nav-link active" href="#">最新活動</a>
+                            <a class="nav-link active" href="#">
+                                <img src="./images/pawBtn.png" alt="#" class="me-12">
+                                最新活動
+                            </a>
                         </li>
                         <li class="nav-item me-4">
-                            <img src="./images/pawBtn.png" alt="#" class="me-12">
-                            <a class="nav-link" href="#">政策議題</a>
+                            <a class="nav-link" href="#">
+                                <img src="./images/pawBtn.png" alt="#" class="me-12">
+                                政策議題
+                            </a>
                         </li>
                         <li class="nav-item me-4">
-                            <img src="./images/pawBtn.png" alt="#" class="me-12">
-                            <a class="nav-link" href="#">小額捐贈</a>
+                            <a class="nav-link" href="#">
+                                <img src="./images/pawBtn.png" alt="#" class="me-12">
+                                小額捐贈
+                            </a>
                         </li>
                         <li class="nav-item me-4">
-                            <img src="./images/pawBtn.png" alt="#" class="me-12">
-                            <a class="nav-link" href="#">服務信箱</a>
+                            <a class="nav-link" href="#">
+                                <img src="./images/pawBtn.png" alt="#" class="me-12">
+                                服務信箱
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Content -->
-        <div class="banner-test">
+        <div class="banner">
             <img src="./images/banner-36 1.png" class="banner-text" data-aos="fade-down">
             <img src="./images/cat-07.png" class="banner-cat" data-aos="fade-left">
+            <button type="button" class="btn btn-dark btn-main" style="margin-top: 450px;">
+                候選人簡介<i class="bi bi-caret-right-fill icon-main"></i>
+            </button>
         </div>
-        <button type="button" class="btn btn-dark btn-main">候選人簡介<i
-                class="bi bi-caret-right-fill icon-main"></i></button>
-    </div>
+        <!-- news -->
+        <div class="news" style="margin-top: 450px;">
+            <img class="d-block mx-auto news-title" src="./images/title1.png">
+            <img class="news-cat" src="./images/news-cat.png" alt="">
 
-    <script src="dist/aos.js"></script>
+    <!-- <script src="dist/aos.js"></script>
     <script>
         if (!window.Cypress)
             AOS.init();
-    </script>
+    </script> -->
 </body>
 
 </html>
