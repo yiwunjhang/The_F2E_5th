@@ -1,0 +1,69 @@
+@import"~bootstrap/dist/css/bootstrap.css";
+@import"~bootstrap-icons/font/bootstrap-icons.css";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import 'aos/dist/aos.css';
+.bg-primary {
+    background: var(--Prime600, #72CEF5) !important;
+}
+
+.navbar {
+    color: var(--Gray300, #383735);
+
+    /* Title/L */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    /* 116.667% */
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    margin-right: 87px;
+}
+
+.me-12 {
+    margin-right: 12px;
+}
+
+.banner-test {
+    position: relative;
+    top: 185px;
+    left: 120px;
+}
+
+.banner-text {
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-cat {
+    z-index: 2;
+    position: absolute;
+    top: -70px;
+    left: 295px;
+}
+
+.btn-main {
+    color: var(--icon-enter, #FFF);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    width: 200px;
+    // height: 48px;
+    vertical-align: middle;line-height: 35px;
+    border-radius: 50px;
+    padding: 20px 8px;
+}
+
+.icon-main {
+    color: var(--icon-enter, #FFF);
+    width: 32px;
+}
