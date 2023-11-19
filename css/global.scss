@@ -8,7 +8,20 @@
 .bg-primary {
     background: var(--Prime600, #72CEF5) !important;
 }
+.bg-second {
+    width: 100%;    
+    background: var(--Prime600, #CCC) !important;
+}
 
+body {
+    top: 0px;
+    width: 100%;
+    transition: all 3s;
+    &.scrolled {
+       background-color: gold;
+       }
+    }
+ 
 .navbar {
     color: var(--Gray300, #383735);
 
@@ -20,6 +33,9 @@
     line-height: 28px;
     /* 116.667% */
     text-transform: uppercase;
+    position: fixed;
+    z-index: 999;
+
 }
 
 .navbar-brand {
@@ -30,7 +46,7 @@
     margin-right: 12px;
 }
 
-.banner-test {
+.banner {
     position: relative;
     top: 185px;
     left: 120px;
@@ -66,4 +82,8 @@
 .icon-main {
     color: var(--icon-enter, #FFF);
     width: 32px;
+}
+
+.news-cat {
+    width: 257px;
 }
