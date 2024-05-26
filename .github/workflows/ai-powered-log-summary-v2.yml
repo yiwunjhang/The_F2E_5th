@@ -1,1 +1,44 @@
 
+# This action uses AI to summarize build logs to a pull-request comment.
+
+name: ai-powered-build-summary
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Bootstrap
+        run: npm install bootstrap@^5.3.2
+
+      - name: Check Bootstrap version
+        run: npm list bootstrap
+        
+      - name: Summarize build logs
+        uses: yiwunjhang/ai-powered-log-summary-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Comment on pull request
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🚀 AI has summarized the build logs. Check the pull request for details.'
+            })
