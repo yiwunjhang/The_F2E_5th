@@ -4,6 +4,9 @@
 name: ai-powered-build-summary
 
 on:
+    push:
+        branches:
+          - main
     pull_request:
         branches:
           - main

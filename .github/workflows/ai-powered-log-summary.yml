@@ -4,8 +4,7 @@ name: ai-powered-build-summary
 
 on:
   pull_request:
-    branches:
-      - main
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
   build:
