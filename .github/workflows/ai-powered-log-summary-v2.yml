@@ -30,10 +30,10 @@ jobs:
       - name: Check Bootstrap version
         run: npm list bootstrap
         
-      - name: Summarize build logs
-        uses: yiwunjhang/ai-powered-log-summary-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+    #   - name: Summarize build logs
+    #     uses: yiwunjhang/ai-powered-log-summary-action@v1
+    #     with:
+    #       github-token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Comment on pull request
         uses: actions/github-script@v5
