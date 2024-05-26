@@ -26,7 +26,7 @@ jobs:
         run: npm list bootstrap
         
       - name: Summarize build logs
-        uses: your-action-repository/ai-powered-log-summary-action@v1
+        uses: yiwunjhang/ai-powered-log-summary-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       
